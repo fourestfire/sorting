@@ -4,6 +4,10 @@ describe('Bubble Sort', function() {
     spyOn(window, 'swap').and.callThrough();
   });
 
+  it('handles an empty array', function() {
+    expect(bubbleSort([])).toEqual([]);
+  });
+
   it('handles a large array', function() {
     expect(bubbleSort([5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5]);
     expect(swap.calls.count()).toEqual(10);
@@ -12,10 +16,6 @@ describe('Bubble Sort', function() {
   it('handles a large array', function() {
     expect(bubbleSort([6, 5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5, 6]);
     expect(swap.calls.count()).toEqual(15);
-  });
-
-  it('handles an empty array', function() {
-    expect(bubbleSort([])).toEqual([]);
   });
 
   it('handles an array of size 1', function() {

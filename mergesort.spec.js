@@ -7,8 +7,8 @@ describe('Split Array function', function() {
   });
   it('is able to split an odd-length array into two halves', function() {
     expect(split([3, 6, 4, 5, 10, 2, 1, 15, 12])).toEqual([
-      [3, 6, 4, 5, 10],
-      [2, 1, 15, 12]
+      [3, 6, 4, 5],
+      [10, 2, 1, 15, 12]
     ]);
   });
 });
